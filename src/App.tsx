@@ -46,6 +46,15 @@ function AppShell() {
   }, []);
 
   useEffect(() => {
+    // The play page is the only product surface. Any entry path resolves to
+    // ROUTE_PLAY_ROUTE through ACT_OPEN_PLAY so the first rendered state is
+    // always the required product surface.
+    if (gameRuntime.getRoute() !== PLAY_ROUTE_PATH) {
+      openPlayRoute();
+    }
+  }, []);
+
+  useEffect(() => {
     gameRuntime.start();
     return () => gameRuntime.stop();
   }, []);
