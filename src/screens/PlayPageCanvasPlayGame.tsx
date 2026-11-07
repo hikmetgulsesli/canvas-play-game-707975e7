@@ -14,16 +14,26 @@ export interface PlayPageCanvasPlayGameProps {
   actions?: {
     "start-game-1"?: () => void;
   };
-
+  /** Current score bound to OBS_START_GAME_OBS_CURRENT_SCORE_VALUE. */
+  score?: number;
+  /** Persisted high score bound to OBS_START_GAME_OBS_HIGH_SCORE_VALUE. */
+  highScore?: number | null;
+  /** Visible status message bound to OBS_START_GAME_OBS_STATUS_TEXT. */
+  statusText?: string;
+  /** Active route path bound to the route observables. */
+  route?: string;
 }
 
 export type PlayPageCanvasPlayGameActionCallbacks = NonNullable<PlayPageCanvasPlayGameProps["actions"]>;
 
-export function PlayPageCanvasPlayGame({ actions }: PlayPageCanvasPlayGameProps) {
+export function PlayPageCanvasPlayGame({ actions, score = 0, highScore = null, statusText = "", route }: PlayPageCanvasPlayGameProps) {
+  const scoreValue = String(score);
+  const highScoreValue = highScore === null || highScore === undefined ? "" : String(highScore);
+  const highScoreText = highScore === null || highScore === undefined ? "—" : String(highScore);
   return (
     <>
       {/* Root Surface: SURF_PLAY_PAGE */}
-        <div data-surface-id="SURF_PLAY_PAGE" className="flex-1 flex flex-col w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6" data-setfarm-element-ref="E000001" data-observable-refs="OBS_OPEN_PLAY_OBS_PLAY_ROUTE_ENTRY OBS_START_GAME_OBS_STAY_ON_PLAY_ROUTE">
+        <div data-surface-id="SURF_PLAY_PAGE" className="flex-1 flex flex-col w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6" data-setfarm-element-ref="E000001" data-observable-refs="OBS_OPEN_PLAY_OBS_PLAY_ROUTE_ENTRY OBS_START_GAME_OBS_STAY_ON_PLAY_ROUTE" data-route={route}>
           
           {/* Top Chrome / Decorative Branding Bar (non-actionable) */}
           <header className="flex items-center justify-between pb-6 border-b border-slate-800">
@@ -45,13 +55,13 @@ export function PlayPageCanvasPlayGame({ actions }: PlayPageCanvasPlayGameProps)
               {/* Score status observable */}
               <div className="bg-slate-900/90 border border-slate-800 rounded-xl px-5 py-2.5 flex items-center gap-3 shadow-inner">
                 <span className="text-xs uppercase tracking-wider text-slate-400 font-medium">Score</span>
-                <span className="text-2xl font-black tracking-tight text-sky-400 tabular-nums" data-setfarm-element-ref="E000002" role="status" aria-label="Score" data-observable-refs="OBS_START_GAME_OBS_CURRENT_SCORE_VALUE">0</span>
+                <span className="text-2xl font-black tracking-tight text-sky-400 tabular-nums" data-setfarm-element-ref="E000002" role="status" aria-label="Score" data-observable-refs="OBS_START_GAME_OBS_CURRENT_SCORE_VALUE" data-value={scoreValue}>{scoreValue}</span>
               </div>
       
               {/* High score status observable */}
               <div className="bg-slate-900/90 border border-slate-800 rounded-xl px-5 py-2.5 flex items-center gap-3 shadow-inner">
                 <span className="text-xs uppercase tracking-wider text-slate-400 font-medium">High Score</span>
-                <span className="text-2xl font-black tracking-tight text-amber-400 tabular-nums" data-setfarm-element-ref="E000003" role="status" aria-label="High score" data-observable-refs="OBS_START_GAME_OBS_HIGH_SCORE_VALUE">0</span>
+                <span className="text-2xl font-black tracking-tight text-amber-400 tabular-nums" data-setfarm-element-ref="E000003" role="status" aria-label="High score" data-observable-refs="OBS_START_GAME_OBS_HIGH_SCORE_VALUE" data-value={highScoreValue}>{highScoreText}</span>
               </div>
             </div>
           </header>
@@ -66,9 +76,7 @@ export function PlayPageCanvasPlayGame({ actions }: PlayPageCanvasPlayGameProps)
               <div className="flex items-center gap-2">
                 <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Status:</span>
                 {/* Game status observable */}
-                <div className="inline-flex items-center text-sm font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-3 py-1 rounded-full" data-setfarm-element-ref="E000004" role="status" aria-label="Game status" data-observable-refs="OBS_START_GAME_OBS_STATUS_TEXT">
-                  Game started
-                </div>
+                <div className="inline-flex items-center text-sm font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-3 py-1 rounded-full" data-setfarm-element-ref="E000004" role="status" aria-label="Game status" data-observable-refs="OBS_START_GAME_OBS_STATUS_TEXT">{statusText}</div>
               </div>
             </div>
       
