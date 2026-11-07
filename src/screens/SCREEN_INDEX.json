@@ -1,0 +1,176 @@
+[
+  {
+    "screenId": "f14e2807a311462faeb19c8e712e4f02",
+    "title": "Play page - Canvas Play Game",
+    "componentName": "PlayPageCanvasPlayGame",
+    "file": "src/screens/PlayPageCanvasPlayGame.tsx",
+    "buttons": 1,
+    "inputs": 0,
+    "textareas": 0,
+    "selects": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "start-game-1",
+        "kind": "button",
+        "label": "Start game",
+        "index": 0,
+        "actionRef": "ACT_START_GAME",
+        "sourceElementRef": "E000005",
+        "physicalControlRef": "CTRL_6690dd7dcf59c820",
+        "controlSlotRef": "CSLOT_START_GAME_START_BUTTON_PLACEMENT",
+        "surfaceRef": "SURF_PLAY_PAGE",
+        "affectedSurfaceRefs": [
+          "SURF_GAME_CANVAS",
+          "SURF_PLAY_PAGE"
+        ],
+        "tagName": "button",
+        "nativeControlKind": "button",
+        "role": null,
+        "ariaLabel": null,
+        "href": null,
+        "interactiveRole": false,
+        "generatedLocalId": "start-game-1",
+        "semanticSource": "data-action",
+        "sourceLocator": "stitch/rendered-dom-v2/f14e2807a311462faeb19c8e712e4f02.html",
+        "selector": "[data-action-id=\"start-game-1\"]"
+      }
+    ],
+    "controls": [
+      {
+        "id": "start-game-1",
+        "kind": "button",
+        "label": "Start game",
+        "index": 0,
+        "actionRef": "ACT_START_GAME",
+        "sourceElementRef": "E000005",
+        "physicalControlRef": "CTRL_6690dd7dcf59c820",
+        "controlSlotRef": "CSLOT_START_GAME_START_BUTTON_PLACEMENT",
+        "surfaceRef": "SURF_PLAY_PAGE",
+        "affectedSurfaceRefs": [
+          "SURF_GAME_CANVAS",
+          "SURF_PLAY_PAGE"
+        ],
+        "tagName": "button",
+        "nativeControlKind": "button",
+        "role": null,
+        "ariaLabel": null,
+        "href": null,
+        "interactiveRole": false,
+        "generatedLocalId": "start-game-1",
+        "semanticSource": "data-action",
+        "sourceLocator": "stitch/rendered-dom-v2/f14e2807a311462faeb19c8e712e4f02.html",
+        "selector": "[data-action-id=\"start-game-1\"]",
+        "generatedSourceLocator": "src/screens/PlayPageCanvasPlayGame.tsx"
+      }
+    ],
+    "observables": [
+      {
+        "observableRef": "OBS_OPEN_PLAY_OBS_PLAY_ROUTE_ENTRY",
+        "actionRef": "ACT_OPEN_PLAY",
+        "selectorKind": "surface",
+        "surfaceRef": "SURF_PLAY_PAGE",
+        "evidenceRef": "EVID_OPEN_PLAY_OBS_PLAY_ROUTE_ENTRY",
+        "sourceElementRef": "E000001",
+        "sourceLocator": "stitch/rendered-dom-v2/f14e2807a311462faeb19c8e712e4f02.html",
+        "selector": "[data-observable-refs~=\"OBS_OPEN_PLAY_OBS_PLAY_ROUTE_ENTRY\"]",
+        "generatedSourceLocator": "src/screens/PlayPageCanvasPlayGame.tsx"
+      },
+      {
+        "observableRef": "OBS_START_GAME_OBS_CURRENT_SCORE_VALUE",
+        "role": "status",
+        "name": "Score",
+        "actionRef": "ACT_START_GAME",
+        "selectorKind": "accessibility",
+        "surfaceRef": "SURF_PLAY_PAGE",
+        "evidenceRef": "EVID_START_GAME_OBS_CURRENT_SCORE_VALUE",
+        "sourceElementRef": "E000002",
+        "sourceLocator": "stitch/rendered-dom-v2/f14e2807a311462faeb19c8e712e4f02.html",
+        "selector": "[data-observable-refs~=\"OBS_START_GAME_OBS_CURRENT_SCORE_VALUE\"]",
+        "generatedSourceLocator": "src/screens/PlayPageCanvasPlayGame.tsx"
+      },
+      {
+        "observableRef": "OBS_START_GAME_OBS_HIGH_SCORE_VALUE",
+        "role": "status",
+        "name": "High score",
+        "actionRef": "ACT_START_GAME",
+        "selectorKind": "accessibility",
+        "surfaceRef": "SURF_PLAY_PAGE",
+        "evidenceRef": "EVID_START_GAME_OBS_HIGH_SCORE_VALUE",
+        "sourceElementRef": "E000003",
+        "sourceLocator": "stitch/rendered-dom-v2/f14e2807a311462faeb19c8e712e4f02.html",
+        "selector": "[data-observable-refs~=\"OBS_START_GAME_OBS_HIGH_SCORE_VALUE\"]",
+        "generatedSourceLocator": "src/screens/PlayPageCanvasPlayGame.tsx"
+      },
+      {
+        "observableRef": "OBS_START_GAME_OBS_START_BUTTON",
+        "actionRef": "ACT_START_GAME",
+        "selectorKind": "control",
+        "controlSlotRef": "CSLOT_START_GAME_START_BUTTON_PLACEMENT",
+        "evidenceRef": "EVID_START_GAME_OBS_START_BUTTON",
+        "sourceElementRef": "E000005",
+        "sourceLocator": "stitch/rendered-dom-v2/f14e2807a311462faeb19c8e712e4f02.html",
+        "selector": "[data-observable-refs~=\"OBS_START_GAME_OBS_START_BUTTON\"]",
+        "generatedSourceLocator": "src/screens/PlayPageCanvasPlayGame.tsx"
+      },
+      {
+        "observableRef": "OBS_START_GAME_OBS_STATUS_TEXT",
+        "role": "status",
+        "name": "Game status",
+        "actionRef": "ACT_START_GAME",
+        "selectorKind": "accessibility",
+        "surfaceRef": "SURF_PLAY_PAGE",
+        "evidenceRef": "EVID_START_GAME_OBS_STATUS_TEXT",
+        "sourceElementRef": "E000004",
+        "sourceLocator": "stitch/rendered-dom-v2/f14e2807a311462faeb19c8e712e4f02.html",
+        "selector": "[data-observable-refs~=\"OBS_START_GAME_OBS_STATUS_TEXT\"]",
+        "generatedSourceLocator": "src/screens/PlayPageCanvasPlayGame.tsx"
+      },
+      {
+        "observableRef": "OBS_START_GAME_OBS_STAY_ON_PLAY_ROUTE",
+        "actionRef": "ACT_START_GAME",
+        "selectorKind": "surface",
+        "surfaceRef": "SURF_PLAY_PAGE",
+        "evidenceRef": "EVID_START_GAME_OBS_STAY_ON_PLAY_ROUTE",
+        "sourceElementRef": "E000001",
+        "sourceLocator": "stitch/rendered-dom-v2/f14e2807a311462faeb19c8e712e4f02.html",
+        "selector": "[data-observable-refs~=\"OBS_START_GAME_OBS_STAY_ON_PLAY_ROUTE\"]",
+        "generatedSourceLocator": "src/screens/PlayPageCanvasPlayGame.tsx"
+      }
+    ],
+    "projection": {
+      "schema": "setfarm.stitch-screen-projection.v2",
+      "mode": "contract_only",
+      "targetRef": "TARGET_PLAY_PAGE",
+      "authoritySchema": "setfarm.design-interaction-graph.v2",
+      "rawInteractiveCounts": {
+        "buttons": 1,
+        "links": 0,
+        "inputs": 0,
+        "textareas": 0,
+        "selects": 0
+      },
+      "requiredObservableRefs": [
+        "OBS_OPEN_PLAY_OBS_PLAY_ROUTE_ENTRY",
+        "OBS_START_GAME_OBS_CURRENT_SCORE_VALUE",
+        "OBS_START_GAME_OBS_HIGH_SCORE_VALUE",
+        "OBS_START_GAME_OBS_START_BUTTON",
+        "OBS_START_GAME_OBS_STATUS_TEXT",
+        "OBS_START_GAME_OBS_STAY_ON_PLAY_ROUTE"
+      ]
+    },
+    "componentApi": {
+      "schema": "setfarm.generated-screen-component-api.v1",
+      "actionsPropName": "actions",
+      "actionBindings": [
+        {
+          "generatedLocalId": "start-game-1",
+          "actionRef": "ACT_START_GAME",
+          "inputFields": []
+        }
+      ],
+      "inputTransports": []
+    },
+    "rejectedControls": []
+  }
+]
